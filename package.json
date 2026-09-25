@@ -1,0 +1,55 @@
+{
+  "name": "superchat-mcp",
+  "version": "0.1.0",
+  "description": "Unofficial Model Context Protocol server for the public Superchat API",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "superchat-mcp": "dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "docs",
+    "examples",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "node --import tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "contract:refresh": "node scripts/refresh-contract.mjs",
+    "check": "npm run format:check && npm run typecheck && npm test && npm run build",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.1.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.1.0",
+    "@types/node": "^22.0.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "prettier": "^3.9.9",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
+  },
+  "keywords": [
+    "mcp",
+    "superchat",
+    "model-context-protocol",
+    "whatsapp"
+  ]
+}

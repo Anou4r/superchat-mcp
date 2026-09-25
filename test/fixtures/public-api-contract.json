@@ -1,0 +1,2094 @@
+{
+  "retrievedAt": "2026-09-25",
+  "source": "https://developers.superchat.com/llms.txt",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/me",
+      "source": "https://developers.superchat.com/reference/get_me.md",
+      "parameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/channels",
+      "source": "https://developers.superchat.com/reference/get_channels.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/channels/{channelId}",
+      "source": "https://developers.superchat.com/reference/get_channels-channelid.md",
+      "parameters": [
+        {
+          "name": "channelId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/inboxes",
+      "source": "https://developers.superchat.com/reference/get_inboxes.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/inboxes/{inboxId}",
+      "source": "https://developers.superchat.com/reference/get_inboxes-inboxid.md",
+      "parameters": [
+        {
+          "name": "inboxId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/users",
+      "source": "https://developers.superchat.com/reference/get_users.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/users/{userId}",
+      "source": "https://developers.superchat.com/reference/get_users-userid.md",
+      "parameters": [
+        {
+          "name": "userId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/labels",
+      "source": "https://developers.superchat.com/reference/get_labels.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/labels/{labelId}",
+      "source": "https://developers.superchat.com/reference/get_labels-labelid.md",
+      "parameters": [
+        {
+          "name": "labelId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/files",
+      "source": "https://developers.superchat.com/reference/get_files.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/files/{fileId}",
+      "source": "https://developers.superchat.com/reference/get_files-fileid.md",
+      "parameters": [
+        {
+          "name": "fileId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/contact-lists",
+      "source": "https://developers.superchat.com/reference/get_contact-lists.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/contact-lists/{contactListId}",
+      "source": "https://developers.superchat.com/reference/get_contact-lists-contactlistid.md",
+      "parameters": [
+        {
+          "name": "contactListId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/custom-attributes",
+      "source": "https://developers.superchat.com/reference/get_custom-attributes.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/templates",
+      "source": "https://developers.superchat.com/reference/get_templates.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "channel_id",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "folder_id",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        },
+        {
+          "name": "type",
+          "in": "query",
+          "schema": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PATemplateContentType"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/templates/{id}",
+      "source": "https://developers.superchat.com/reference/get_templates-id.md",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/contacts",
+      "source": "https://developers.superchat.com/reference/get_contacts.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/contacts",
+      "source": "https://developers.superchat.com/reference/post_contacts.md",
+      "parameters": [],
+      "body": {
+        "$ref": "#/components/schemas/PACreateContactDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "GET",
+      "path": "/contacts/{contactId}",
+      "source": "https://developers.superchat.com/reference/get_contacts-contactid.md",
+      "parameters": [
+        {
+          "name": "contactId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/contacts/{contactId}",
+      "source": "https://developers.superchat.com/reference/patch_contacts-contactid.md",
+      "parameters": [
+        {
+          "name": "contactId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/PAUpdateContactDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "DELETE",
+      "path": "/contacts/{contactId}",
+      "source": "https://developers.superchat.com/reference/delete_contacts-contactid.md",
+      "parameters": [
+        {
+          "name": "contactId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/contacts/search",
+      "source": "https://developers.superchat.com/reference/post_contacts-search.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/PASearchContactDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "GET",
+      "path": "/contacts/{contactId}/conversations",
+      "source": "https://developers.superchat.com/reference/get_contacts-contactid-conversations.md",
+      "parameters": [
+        {
+          "name": "contactId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/contacts/{contactId}/contact-lists",
+      "source": "https://developers.superchat.com/reference/get_contacts-contactid-contact-lists.md",
+      "parameters": [
+        {
+          "name": "contactId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/conversations",
+      "source": "https://developers.superchat.com/reference/get_conversations.md",
+      "parameters": [
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/conversations/{id}",
+      "source": "https://developers.superchat.com/reference/get_conversations-id.md",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "PATCH",
+      "path": "/conversations/{id}",
+      "source": "https://developers.superchat.com/reference/patch_conversations-id.md",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/PAUpdateConversationDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "DELETE",
+      "path": "/conversations/{id}",
+      "source": "https://developers.superchat.com/reference/delete_conversations-id.md",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/conversations/{id}/notes",
+      "source": "https://developers.superchat.com/reference/get_conversations-id-notes.md",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "default": 50
+          }
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/conversations/{id}/notes",
+      "source": "https://developers.superchat.com/reference/post_conversations-id-notes.md",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/PACreateNoteDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "GET",
+      "path": "/conversations/{conversationId}/notes/{noteId}",
+      "source": "https://developers.superchat.com/reference/get_conversations-conversationid-notes-noteid.md",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "noteId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/conversations/{conversationId}/notes/{noteId}",
+      "source": "https://developers.superchat.com/reference/put_conversations-conversationid-notes-noteid.md",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "noteId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/PAUpdateNoteDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "DELETE",
+      "path": "/conversations/{conversationId}/notes/{noteId}",
+      "source": "https://developers.superchat.com/reference/delete_conversations-conversationid-notes-noteid.md",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "noteId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/conversations/{conversationId}/export",
+      "source": "https://developers.superchat.com/reference/post_conversations-conversationid-export.md",
+      "parameters": [
+        {
+          "name": "conversationId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/PACreateConversationExportDTO"
+      },
+      "bodyRequired": false
+    },
+    {
+      "method": "GET",
+      "path": "/conversations/{conversationId}/export/{conversationExportId}",
+      "source": "https://developers.superchat.com/reference/get_conversations-conversationid-export-conversationexportid.md",
+      "parameters": [
+        {
+          "name": "conversationExportId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "conversationId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/messages",
+      "source": "https://developers.superchat.com/reference/post_messages.md",
+      "parameters": [],
+      "body": {
+        "$ref": "#/components/schemas/PASendMessageDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "GET",
+      "path": "/conversations/{id}/messages",
+      "source": "https://developers.superchat.com/reference/get_conversations-id-messages.md",
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "created_after",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "created_before",
+          "in": "query",
+          "schema": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "schema": {
+            "type": "integer",
+            "format": "int32",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 20
+          }
+        }
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/contacts/{contactId}/contact-lists",
+      "source": "https://developers.superchat.com/reference/post_contacts-contactid-contact-lists.md",
+      "parameters": [
+        {
+          "name": "contactId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "body": {
+        "$ref": "#/components/schemas/PAContactAddContactListDTO"
+      },
+      "bodyRequired": true
+    },
+    {
+      "method": "DELETE",
+      "path": "/contacts/{contactId}/contact-lists/{contactListId}",
+      "source": "https://developers.superchat.com/reference/delete_contacts-contactid-contact-lists-contactlistid.md",
+      "parameters": [
+        {
+          "name": "contactId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "contactListId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  ],
+  "components": {
+    "schemas": {
+      "PATemplateContentType": {
+        "type": "string",
+        "enum": [
+          "generic_template",
+          "whats_app_template"
+        ]
+      },
+      "PACreateContactDTO": {
+        "type": "object",
+        "required": [
+          "first_name",
+          "last_name",
+          "gender",
+          "handles"
+        ],
+        "properties": {
+          "first_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "gender": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Gender"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "handles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PAWriteContactHandleDTO"
+            },
+            "minItems": 1
+          },
+          "custom_attributes": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_DATE_ONLY"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_DATE_TIME"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_MULTI_SELECT"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_NUMBER"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_SINGLE_SELECT"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_STRING"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "Gender": {
+        "type": "string",
+        "enum": [
+          "male",
+          "female",
+          "diverse",
+          "unknown"
+        ]
+      },
+      "PAWriteContactHandleDTO": {
+        "type": "object",
+        "required": [
+          "id",
+          "value"
+        ],
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "mail",
+              "phone"
+            ]
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "WRITE_CONTACT_ATTRIBUTE_DATE_ONLY": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "WRITE_CONTACT_ATTRIBUTE_DATE_TIME": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "WRITE_CONTACT_ATTRIBUTE_MULTI_SELECT": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "value"
+        ]
+      },
+      "WRITE_CONTACT_ATTRIBUTE_NUMBER": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "WRITE_CONTACT_ATTRIBUTE_SINGLE_SELECT": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "WRITE_CONTACT_ATTRIBUTE_STRING": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "PAUpdateContactDTO": {
+        "type": "object",
+        "required": [
+          "first_name",
+          "last_name",
+          "gender"
+        ],
+        "properties": {
+          "first_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "gender": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Gender"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "handles": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "$ref": "#/components/schemas/PAWriteContactHandleDTO"
+            }
+          },
+          "custom_attributes": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_DATE_ONLY"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_DATE_TIME"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_MULTI_SELECT"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_NUMBER"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_SINGLE_SELECT"
+                },
+                {
+                  "$ref": "#/components/schemas/WRITE_CONTACT_ATTRIBUTE_STRING"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "PASearchContactDTO": {
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "properties": {
+          "query": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PASearchContactQueryDTO"
+              }
+            ]
+          }
+        }
+      },
+      "PASearchContactQueryDTO": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/SEARCH_CONTACT_QUERY_MAIL"
+                },
+                {
+                  "$ref": "#/components/schemas/SEARCH_CONTACT_QUERY_PHONE"
+                },
+                {
+                  "$ref": "#/components/schemas/SEARCH_CONTACT_QUERY_INSTAGRAM"
+                },
+                {
+                  "$ref": "#/components/schemas/SEARCH_CONTACT_QUERY_CUSTOM_ATTRIBUTE"
+                }
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 1
+          }
+        }
+      },
+      "SEARCH_CONTACT_QUERY_MAIL": {
+        "type": "object",
+        "properties": {
+          "column": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string",
+            "const": "mail"
+          },
+          "operator": {
+            "type": "string",
+            "enum": [
+              "="
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/ContactHandleType"
+          },
+          "value": {}
+        },
+        "required": [
+          "field",
+          "operator",
+          "value"
+        ]
+      },
+      "ContactHandleType": {
+        "type": "string",
+        "enum": [
+          "phone",
+          "mail",
+          "facebook_messenger",
+          "instagram",
+          "telegram",
+          "live_chat",
+          "google_business_messaging",
+          "whats_app_bsuid"
+        ]
+      },
+      "SEARCH_CONTACT_QUERY_PHONE": {
+        "type": "object",
+        "properties": {
+          "column": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string",
+            "const": "phone"
+          },
+          "operator": {
+            "type": "string",
+            "enum": [
+              "="
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/ContactHandleType"
+          },
+          "value": {}
+        },
+        "required": [
+          "field",
+          "operator",
+          "value"
+        ]
+      },
+      "SEARCH_CONTACT_QUERY_INSTAGRAM": {
+        "type": "object",
+        "properties": {
+          "column": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string",
+            "const": "instagram"
+          },
+          "operator": {
+            "type": "string",
+            "enum": [
+              "="
+            ]
+          },
+          "type": {
+            "$ref": "#/components/schemas/ContactHandleType"
+          },
+          "value": {}
+        },
+        "required": [
+          "field",
+          "operator",
+          "value"
+        ]
+      },
+      "SEARCH_CONTACT_QUERY_CUSTOM_ATTRIBUTE": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "const": "custom_attribute"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string",
+            "enum": [
+              "="
+            ]
+          },
+          "value": {}
+        },
+        "required": [
+          "field",
+          "identifier",
+          "operator",
+          "value"
+        ]
+      },
+      "PAUpdateConversationDTO": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ConversationStatus"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "inbox_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "snoozed_until": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "assigned_users": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "labels": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          }
+        }
+      },
+      "ConversationStatus": {
+        "type": "string",
+        "enum": [
+          "open",
+          "done",
+          "spam",
+          "archived",
+          "snoozed"
+        ]
+      },
+      "Instant": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "PACreateNoteDTO": {
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "properties": {
+          "content": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "file_ids": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          }
+        }
+      },
+      "PAUpdateNoteDTO": {
+        "type": "object",
+        "required": [
+          "content"
+        ],
+        "properties": {
+          "content": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "file_ids": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          }
+        }
+      },
+      "PACreateConversationExportDTO": {
+        "type": "object",
+        "required": [
+          "start",
+          "end"
+        ],
+        "properties": {
+          "start": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "end": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Instant"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "PASendMessageDTO": {
+        "type": "object",
+        "required": [
+          "to",
+          "from",
+          "content"
+        ],
+        "properties": {
+          "to": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PAMessageReqReceiverDTO"
+            },
+            "minItems": 1,
+            "maxItems": 1
+          },
+          "from": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PAMessageReqSenderDTO"
+              }
+            ]
+          },
+          "content": {
+            "type": "object",
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MESSAGE_CONTENT_REQ_TEXT"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_CONTENT_REQ_MEDIA"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_CONTENT_REQ_EMAIL"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_CONTENT_REQ_GENERIC_TEMPLATE"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_CONTENT_REQ_WHATS_APP_QUICK_REPLY"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_CONTENT_REQ_WHATS_APP_TEMPLATE"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_CONTENT_REQ_WHATS_APP_LIST"
+              }
+            ]
+          },
+          "in_reply_to": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "PAMessageReqReceiverDTO": {
+        "type": "object",
+        "required": [
+          "identifier"
+        ],
+        "properties": {
+          "identifier": {
+            "type": "string"
+          }
+        }
+      },
+      "PAMessageReqSenderDTO": {
+        "type": "object",
+        "required": [
+          "channel_id",
+          "name"
+        ],
+        "properties": {
+          "channel_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "MESSAGE_CONTENT_REQ_TEXT": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "text"
+          }
+        },
+        "required": [
+          "body",
+          "type"
+        ]
+      },
+      "MESSAGE_CONTENT_REQ_MEDIA": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "media"
+          }
+        },
+        "required": [
+          "file_id",
+          "type"
+        ]
+      },
+      "MESSAGE_CONTENT_REQ_EMAIL": {
+        "type": "object",
+        "properties": {
+          "files": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PASendMessageReqEmailContentFileDTO"
+            }
+          },
+          "html": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "email"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "PASendMessageReqEmailContentFileDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "MESSAGE_CONTENT_REQ_GENERIC_TEMPLATE": {
+        "type": "object",
+        "properties": {
+          "template_id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "generic_template"
+          },
+          "variables": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PAMessageReqTemplateVariableDTO"
+            }
+          }
+        },
+        "required": [
+          "template_id",
+          "type"
+        ]
+      },
+      "PAMessageReqTemplateVariableDTO": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "position",
+          "value"
+        ]
+      },
+      "MESSAGE_CONTENT_REQ_WHATS_APP_QUICK_REPLY": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string"
+          },
+          "footer": {
+            "type": "string"
+          },
+          "header": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_TEXT"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_IMAGE"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_VIDEO"
+              },
+              {
+                "$ref": "#/components/schemas/MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_DOCUMENT"
+              }
+            ]
+          },
+          "replies": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PAMessageContentWhatsAppQuickReplyReply"
+            }
+          },
+          "type": {
+            "type": "string",
+            "const": "whats_app_quick_reply"
+          }
+        },
+        "required": [
+          "body",
+          "replies",
+          "type"
+        ]
+      },
+      "MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_TEXT": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "text"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "value"
+        ]
+      },
+      "MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_IMAGE": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "image"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_VIDEO": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "video"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "MESSAGE_WHATSAPP_QUICK_REPLY_HEADER_DOCUMENT": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "document"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "PAMessageContentWhatsAppQuickReplyReply": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      },
+      "MESSAGE_CONTENT_REQ_WHATS_APP_TEMPLATE": {
+        "type": "object",
+        "properties": {
+          "file": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PASendMessageReqWhatsAppTemplateContentFileDTO"
+              }
+            ]
+          },
+          "template_id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "whats_app_template"
+          },
+          "variables": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PAMessageReqTemplateVariableDTO"
+            }
+          }
+        },
+        "required": [
+          "template_id",
+          "type"
+        ]
+      },
+      "PASendMessageReqWhatsAppTemplateContentFileDTO": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        }
+      },
+      "MESSAGE_CONTENT_REQ_WHATS_APP_LIST": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string"
+          },
+          "footer": {
+            "type": "string"
+          },
+          "header": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/PAMessageContentWhatsAppListHeader"
+              }
+            ]
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PAMessageContentWhatsAppListSection"
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "whats_app_list"
+          }
+        },
+        "required": [
+          "body",
+          "sections",
+          "title",
+          "type"
+        ]
+      },
+      "PAMessageContentWhatsAppListHeader": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "string",
+            "maxLength": 60
+          }
+        }
+      },
+      "PAMessageContentWhatsAppListSection": {
+        "type": "object",
+        "properties": {
+          "rows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PAMessageContentWhatsAppListSectionRow"
+            }
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "rows"
+        ]
+      },
+      "PAMessageContentWhatsAppListSectionRow": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "PAContactAddContactListDTO": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

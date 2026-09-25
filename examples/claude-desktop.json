@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "superchat": {
+      "command": "node",
+      "args": ["/absolute/path/to/superchat-mcp/dist/cli.js"],
+      "env": {
+        "SUPERCHAT_API_KEY": "YOUR_SUPERCHAT_API_KEY",
+        "SUPERCHAT_ENABLE_WRITES": "false",
+        "SUPERCHAT_ENABLE_DELETES": "false",
+        "SUPERCHAT_ENABLE_ENTERPRISE_TOOLS": "false"
+      }
+    }
+  }
+}
